@@ -29,5 +29,21 @@ namespace RangeKata
 				r.HighEndInclusivity,
 				Is.EqualTo(HighRangeEndInclusivity.IsExclusive));
 		}
+
+		[Test]
+		[Ignore("need to build method that determines if one number is contained before we finish this")]
+		public void CanDetermineIfRangeContainsListTest()
+		{
+			List<int> listToCheck = new List<int> { 2, 4 };
+			Range r = new Range(
+				2,
+				6,
+				LowRangeEndInclusivity.IsInclusive,
+				HighRangeEndInclusivity.IsExclusive);
+
+			bool contains = r.Contains(listToCheck);
+
+			Assert.That(contains, Is.True);
+		}
 	}
 }

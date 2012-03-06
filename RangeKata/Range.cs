@@ -26,5 +26,10 @@ namespace RangeKata
 		public LowRangeEndInclusivity LowEndInclusivity { get; set; }
 		public HighRangeEndInclusivity HighEndInclusivity { get; set; }
 
+
+		public bool Contains(List<int> listToCheck)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }
