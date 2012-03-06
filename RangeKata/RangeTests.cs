@@ -45,5 +45,21 @@ namespace RangeKata
 
 			Assert.That(contains, Is.True);
 		}
+
+		[Test]
+		public void CanDetermineIfRangeContainsIntegerTest()
+		{
+			Range r = new Range(
+				2,
+				6,
+				LowRangeEndInclusivity.IsInclusive,
+				HighRangeEndInclusivity.IsExclusive);
+
+			Assert.That(r.Contains(5), Is.True);
+			Assert.That(r.Contains(2), Is.True);
+			Assert.That(r.Contains(1), Is.False);
+			Assert.That(r.Contains(4), Is.True);
+			Assert.That(r.Contains(6), Is.False);
+		}
 	}
 }

@@ -31,5 +31,27 @@ namespace RangeKata
 		{
 			throw new NotImplementedException();
 		}
+
+		public bool Contains(int p)
+		{
+			if (LowEndInclusivity == LowRangeEndInclusivity.IsInclusive)
+			{
+				if (p < Low) return false;
+			}
+			else
+			{
+				if (p <= Low) return false;
+			}
+			if (HighEndInclusivity == HighRangeEndInclusivity.IsInclusive)
+			{
+				if (p > High) return false;
+			}
+			else
+			{
+				if (p >= High) return false;
+			}
+
+			return true;
+		}
 	}
 }
