@@ -31,7 +31,6 @@ namespace RangeKata
 		}
 
 		[Test]
-		[Ignore("need to build method that determines if one number is contained before we finish this")]
 		public void CanDetermineIfRangeContainsListTest()
 		{
 			List<int> listToCheck = new List<int> { 2, 4 };

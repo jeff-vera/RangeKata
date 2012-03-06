@@ -29,7 +29,12 @@ namespace RangeKata
 
 		public bool Contains(List<int> listToCheck)
 		{
-			throw new NotImplementedException();
+			foreach (int x in listToCheck)
+			{
+				if (!Contains(x)) return false;
+			}
+
+			return true;
 		}
 
 		public bool Contains(int p)
